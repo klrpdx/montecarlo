@@ -6,9 +6,6 @@ import com.klr.montecarlo.util.SimulationData;
 import com.klr.montecarlo.util.SimulationResults;
 import org.apache.commons.math3.distribution.NormalDistribution;
 import org.apache.commons.math3.random.RandomDataGenerator;
-import org.apache.commons.math3.stat.StatUtils;
-import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
-import org.apache.commons.math3.util.Precision;
 
 public class MonteCarlo {
 
@@ -28,7 +25,7 @@ public class MonteCarlo {
         MonteCarlo monte = new MonteCarlo(new FileLoaderImpl(args[0]));
         SimulationResults results = null;
         try {
-            results = monte.simulate(1315000.00, 40, .1084, .1735, 100000);
+            results = monte.simulate(1315000.00, 39, .1084, .1735, 100000);
         }
         catch (Exception e) {
             e.printStackTrace();
