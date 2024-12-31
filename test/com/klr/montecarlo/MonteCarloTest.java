@@ -3,8 +3,6 @@ package com.klr.montecarlo;
 import com.klr.montecarlo.util.FileLoaderImpl;
 import com.klr.montecarlo.util.SimulationData;
 import com.klr.montecarlo.util.SimulationResults;
-import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -36,7 +34,7 @@ class MonteCarloTest {
         final double std  = .01;
         final int iterations = 1;
         simulationData = new SimulationData();
-        simulationData.add(0,0);
+        simulationData.add(0);
 
         when(fileLoader.getSimulationData()).thenReturn(simulationData);
         SimulationResults simResults = mc.simulate(100.00, 1, mean, std, iterations);
@@ -51,8 +49,8 @@ class MonteCarloTest {
         final int iterations = 1;
         final int years = 2;
         simulationData = new SimulationData();
-        simulationData.add(0,0);
-        simulationData.add(0,0);
+        simulationData.add(0);
+        simulationData.add(0);
 
         when(fileLoader.getSimulationData()).thenReturn(simulationData);
 
@@ -68,9 +66,9 @@ class MonteCarloTest {
         final int iterations = 1;
         final int years = 3;
         simulationData = new SimulationData();
-        simulationData.add(20,0);
-        simulationData.add(20,0);
-        simulationData.add(20,0);
+        simulationData.add(20);
+        simulationData.add(20);
+        simulationData.add(20);
 
         when(fileLoader.getSimulationData()).thenReturn(simulationData);
         SimulationResults simResults = mc.simulate(startingBalance, years, mean, std, iterations);
@@ -85,9 +83,9 @@ class MonteCarloTest {
         final int iterations = 1;
         final int years = 3;
         simulationData = new SimulationData();
-        simulationData.add(20,50);
-        simulationData.add(20,50);
-        simulationData.add(20,50);
+        simulationData.add(20);
+        simulationData.add(20);
+        simulationData.add(20);
 
         when(fileLoader.getSimulationData()).thenReturn(simulationData);
 
@@ -105,7 +103,7 @@ class MonteCarloTest {
         final int years = 1;
         final int iterations = 2;
         simulationData = new SimulationData();
-        simulationData.add(20,50);
+        simulationData.add(20);
 
         when(fileLoader.getSimulationData()).thenReturn(simulationData);
 
@@ -121,9 +119,9 @@ class MonteCarloTest {
         final int years = 3;
         final int iterations = 2;
         simulationData = new SimulationData();
-        simulationData.add(20,50);
-        simulationData.add(20,50);
-        simulationData.add(20,50);
+        simulationData.add(20);
+        simulationData.add(20);
+        simulationData.add(20);
 
         when(fileLoader.getSimulationData()).thenReturn(simulationData);
 
@@ -139,8 +137,8 @@ class MonteCarloTest {
         final int years = 3;
         final int iterations = 2;
         simulationData = new SimulationData();
-        simulationData.add(20,50);
-        simulationData.add(20,50);
+        simulationData.add(20);
+        simulationData.add(20);
 
         when(fileLoader.getSimulationData()).thenReturn(simulationData);
 
@@ -157,9 +155,9 @@ class MonteCarloTest {
         final int years = 3;
         final int iterations = 3;
         simulationData = new SimulationData();
-        simulationData.add(20,50);
-        simulationData.add(20,50);
-        simulationData.add(20,50);
+        simulationData.add(20);
+        simulationData.add(20);
+        simulationData.add(20);
 
         when(fileLoader.getSimulationData()).thenReturn(simulationData);
 
@@ -175,9 +173,9 @@ class MonteCarloTest {
         final int years = 3;
         final int iterations = 3;
         simulationData = new SimulationData();
-        simulationData.add(20,50);
-        simulationData.add(20,50);
-        simulationData.add(20,50);
+        simulationData.add(20);
+        simulationData.add(20);
+        simulationData.add(20);
 
         when(fileLoader.getSimulationData()).thenReturn(simulationData);
 

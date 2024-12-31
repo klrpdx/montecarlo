@@ -6,7 +6,7 @@ public class SimulationData {
 
     private final ArrayList<Double> expenses = new ArrayList<>();
 
-    public void add(double expense, double income) {
+    public void add(double expense) {
         expenses.add(expense);
     }
 

@@ -28,10 +28,10 @@ public class FileLoaderImpl implements DataLoader {
         while ((line = this.nextLine()) != null) {
             lineNumber++;
             String[] data = line.split(",");
-            if (data.length != 3) {
+            if (data.length != 2) {
                 throw new IOException("Malformed CSV file on line "+lineNumber);
             }
-            simulationData.add(Double.parseDouble(data[1]),Double.parseDouble(data[2]));
+            simulationData.add(Double.parseDouble(data[1]));
         }
         return simulationData;
     }
